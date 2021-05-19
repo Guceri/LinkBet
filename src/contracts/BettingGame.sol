@@ -1,5 +1,5 @@
 /** Contract created based on: https://docs.chain.link/docs/get-a-random-number
- *  Contract created only for educational purposes, by: github.com/dappuniversity
+ *  Contract created only for educational purposes
  *  You will need testnet ETH and LINK.
  *     - Rinkeby ETH faucet: https://faucet.rinkeby.io/
  *     - Rinkeby LINK faucet: https://rinkeby.chain.link/
