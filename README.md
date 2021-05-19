@@ -2,7 +2,8 @@
 ##
 ## Link Betting Game
 Major Topics:
-- tutorial on ChainLink's random number contract (from: [Dapp University](https://www.youtube.com/watch?v=YzCbaR15Xi4&t=971s))
+- tutorial on Betting Game (from: [Dapp University](https://www.youtube.com/watch?v=YzCbaR15Xi4&t=971s))
+- tutorial for getting a random number from [ChainLink](https://www.youtube.com/watch?v=JqZWariqh5s)
 - deployment to testnet (Rinkeby)
 
 ## Design
