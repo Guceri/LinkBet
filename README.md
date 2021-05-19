@@ -7,7 +7,7 @@ Major Topics:
 
 ## Design
 
-![](public/chart.png)
+![](public/BettingGame.png)
 
 ## UI
 
