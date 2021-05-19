@@ -2,7 +2,7 @@
   "name": "chainlink_betting_game",
   "version": "0.1.0",
   "description": "Betting Game",
-  "author": "github.com/xternet",
+  "author": "Tolga Guceri",
   "homepage": ".",
   "dependencies": {
     "@chainlink/contracts": "^0.1.7",
