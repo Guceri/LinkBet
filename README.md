@@ -17,8 +17,10 @@ Major Topics:
 	- https://rinkeby.chain.link/
 	- click on add token and copy/paste link address from smart contract
 
+```
 contract address:    0xD2513257A3dC8918c5f04cCEB1Fb10d82644aaEE
 account:             0x8f2B5EF30D3DEe90840bb7D4a8aC27A6266aAe5F
+```
 
 ## UI
 
