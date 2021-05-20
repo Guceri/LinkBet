@@ -10,14 +10,15 @@ Major Topics Learned:
 - commenting out unused variables to suppress warnings
 - use of mapping to allow multiple pending states (bets) to ensure proper payouts 
 - for loops in smart contracts
-
+- react -> "componentWillMount" removed & "componentDidMount" used  
 
 Resources:
 - tutorial on Betting Game (from: [Dapp University](https://www.youtube.com/watch?v=YzCbaR15Xi4&t=971s))
 - tutorial for getting a random number from [ChainLink](https://www.youtube.com/watch?v=JqZWariqh5s)
 
-**NOTE**: my code has been modified and updated to fix general use bugs present in the tutorial.
-I believe my version to be more update and robust than the tutorial. 
+**NOTE**: My code has been modified and updated to fix general use bugs present in the Dapp University 
+tutorial. MetaMask and React have gone through some changes which I have updated along with making the code
+cleaner and easier to read (front-end).  
 
 ## Design
 
