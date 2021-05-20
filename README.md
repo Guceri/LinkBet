@@ -16,6 +16,9 @@ Resources:
 - tutorial on Betting Game (from: [Dapp University](https://www.youtube.com/watch?v=YzCbaR15Xi4&t=971s))
 - tutorial for getting a random number from [ChainLink](https://www.youtube.com/watch?v=JqZWariqh5s)
 
+**NOTE**: my code has been modified and updated to fix general use bugs present in the tutorial.
+I believe my version to be more update and robust than the tutorial. 
+
 ## Design
 
 ![](public/BettingGame.png)
@@ -30,8 +33,8 @@ Resources:
 	- click on add token and copy/paste link address from smart contract
 
 ```
-contract address:    0xD2513257A3dC8918c5f04cCEB1Fb10d82644aaEE
-account:             0x8f2B5EF30D3DEe90840bb7D4a8aC27A6266aAe5F
+contract address:    0xCb8264ADba345e763c544F3645Ff16431fc259a4
+owner account:       0x8f2B5EF30D3DEe90840bb7D4a8aC27A6266aAe5F
 ```
 
 ## UI
