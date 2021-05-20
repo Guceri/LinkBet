@@ -8,7 +8,8 @@ Major Topics Learned:
 - ERC677 Token (LINK) -> makes working with oracles easier
 - callback interaction with another contract
 - commenting out unused variables to suppress warnings
-- Scaling Solutions -> use of mapping to allow multiple pending states (bets) to ensure proper payouts 
+- use of mapping to allow multiple pending states (bets) to ensure proper payouts 
+- for loops in smart contracts
 
 
 Resources:
