@@ -1,14 +1,20 @@
 ![](public/eth.png)
 ##
 ## Link Betting Game
-Major Topics:
+Major Topics Learned:
+- deployment to testnet (Rinkeby)
+- interacting with other smart contracts
+- commenting out unused variables to suppress warnings
+
+
+Resources:
 - tutorial on Betting Game (from: [Dapp University](https://www.youtube.com/watch?v=YzCbaR15Xi4&t=971s))
 - tutorial for getting a random number from [ChainLink](https://www.youtube.com/watch?v=JqZWariqh5s)
-- deployment to testnet (Rinkeby)
 
 ## Design
 
 ![](public/BettingGame.png)
+![](public/VRF_cycle.png)
 
 ## Instructions
 - Use Rinkeby test network and get funds from faucet

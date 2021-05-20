@@ -99,7 +99,7 @@ contract BettingGame is VRFConsumerBase {
    .lateestRoundData() comes from the AggregatorV3Interface.sol import 
    */
   function ethInUsd() public view returns (int) {
-    (uint80 roundID, int price, uint startedAt, uint timeStamp, uint80 answeredInRound) = priceFeed.latestRoundData();
+    (/*uint80 roundID88*/, int price, /*uint startedAt*/, /*uint timeStamp*/, /*uint80 answeredInRound*/) = priceFeed.latestRoundData();
     
     return price;
   }
@@ -165,7 +165,7 @@ contract BettingGame is VRFConsumerBase {
    *LINK TEMPLATE FUNCTION
    *Callback function used by VRF Coordinator.
    */
-  function fulfillRandomness(bytes32 requestId, uint256 randomness) internal override {
+  function fulfillRandomness(bytes32 /*requestId*/, uint256 randomness) internal override {
     randomResult = randomness;
     //send final random value to the verdict();
     verdict(randomResult);
