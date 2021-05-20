@@ -21,11 +21,17 @@ tutorial. MetaMask and React have gone through some changes which I have updated
 cleaner and easier to read (front-end).  
 
 ## Design
-
 ![](public/BettingGame.png)
 ![](public/VRF_cycle.png)
 
 ## Instructions
+The front end will display the current connected account in the upper right hand corner along with the 
+users balance in the lower right of the app.  The user can place a bet for any amount between the min and 
+max bet amounts.  There is a 50/50 change of getting the outcome is either "high" or "low".  There payout is
+1-1 (ie. if you bet 1 eth and win, you receive 1 eth )
+
+To play the game, please use the faucet below to get ETH and fund your smart contract with both ETH & LINK.
+
 - Use Rinkeby test network and get funds from faucet
 	- https://faucet.rinkeby.io/
 	- request funds via twitter and then paste link to tweet and select the amount of eth you want
@@ -33,11 +39,5 @@ cleaner and easier to read (front-end).
 	- https://rinkeby.chain.link/
 	- click on add token and copy/paste link address from smart contract
 
-```
-contract address:    0xCb8264ADba345e763c544F3645Ff16431fc259a4
-owner account:       0x8f2B5EF30D3DEe90840bb7D4a8aC27A6266aAe5F
-```
-
 ## UI
-
 ![](public/UI.png)
