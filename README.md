@@ -2,9 +2,13 @@
 ##
 ## Link Betting Game
 Major Topics Learned:
-- deployment to testnet (Rinkeby)
-- interacting with other smart contracts
+- deployment to testnet (Rinkeby) -> network specific contract interaction
+- use Links pricefeed oracle to get ETH/USD price
+- use Links VRF contract to get a random number
+- ERC677 Token (LINK) -> makes working with oracles easier
+- callback interaction with another contract
 - commenting out unused variables to suppress warnings
+- Scaling Solutions -> use of mapping to allow multiple pending states (bets) to ensure proper payouts 
 
 
 Resources:
