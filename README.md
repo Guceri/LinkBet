@@ -16,7 +16,7 @@ Major Topics Learned:
 Resources:
 - tutorial on Betting Game (from: [Dapp University](https://www.youtube.com/watch?v=YzCbaR15Xi4&t=971s))
 - tutorial for getting a random number from [ChainLink](https://www.youtube.com/watch?v=JqZWariqh5s)
-
+##
 **NOTE**: My code has been modified and updated to fix general use bugs present in the Dapp University 
 tutorial. MetaMask and React have gone through some changes which I have updated along with making the code
 cleaner and easier to read (front-end).  
@@ -30,7 +30,7 @@ Updates:
 - filter events so that only ones from the user account are shown (in the event of multiple users)
 - have metamask pop up to log in when page loads
 - clean up dead/redundant code
-
+##
 ## Design
 ![](public/BettingGame.png)
 ![](public/VRF_cycle.png)
