@@ -10,7 +10,7 @@ Major Topics Learned:
 - commenting out unused variables to suppress warnings
 - use of mapping to allow multiple pending states (bets) to ensure proper payouts 
 - using for loops in smart contracts for pending processes
-- dynamically adjusting account balances withou refreshing the page
+- dynamically adjusting account balances without refreshing the page
 - react -> "componentWillMount" removed & "componentDidMount" used  
 
 Resources:
