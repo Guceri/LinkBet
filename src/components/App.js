@@ -104,7 +104,7 @@ class App extends Component {
       //update balance once ETH is sent to the smart contract
       balance = await this.state.web3.eth.getBalance(this.state.account)
       this.setState({ balance, loading: false })
-      alert("Please be patient, talking to oracles now...")
+      alert("Please be patient, it's in the hands of the oracles now...")
     })
   }
 
