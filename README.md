@@ -19,8 +19,17 @@ Resources:
 
 **NOTE**: My code has been modified and updated to fix general use bugs present in the Dapp University 
 tutorial. MetaMask and React have gone through some changes which I have updated along with making the code
-cleaner and easier to read (front-end).  The UI was also not dynamically updating which would require the user
-to have to refresh the page.  
+cleaner and easier to read (front-end).  
+
+Updates:
+- switch to componentWillMount (updated to react 17.0.1)
+- changed metamask connection to reflect their latest changes (use our web3.js)
+- dynamically update navbar account when we are not on the correct network
+- dynamically update account balance once transaction is sent to smart contract
+- allow user to bet again after account has updated (even with a pending result)
+- filter events so that only ones from the user account are shown (in the event of multiple users)
+- have metamask pop up to log in when page loads
+- clean up dead/redundant code
 
 ## Design
 ![](public/BettingGame.png)
