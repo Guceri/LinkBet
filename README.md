@@ -21,7 +21,7 @@ Resources:
 tutorial. MetaMask and React have gone through some changes which I have updated along with making the code
 cleaner and easier to read (front-end).  
 
-Updates:
+**Updates**:
 - switch to componentWillMount (updated to react 17.0.1)
 - changed metamask connection to reflect their latest changes (use our web3.js)
 - dynamically update navbar account when we are not on the correct network
