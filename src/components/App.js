@@ -24,7 +24,6 @@ class App extends Component {
     //================================================================================================ 
     //Network
     network = await window.ethereum.request({ method: 'net_version' })
-    this.setState({ network }) 
     if(network === "4"){
       //Smart Contract 
       contractAddress = '0xCb8264ADba345e763c544F3645Ff16431fc259a4' //rinkeby    
@@ -68,7 +67,7 @@ class App extends Component {
         balance = await web3.eth.getBalance(this.state.account)
         maxBet = await web3.eth.getBalance(this.state.contractAddress)
         minBet = await contract.methods.weiInUsd().call()
-        this.setState({ balance, maxBet, minBet, network, wrongNetwork: false })
+        this.setState({ balance, maxBet, minBet, wrongNetwork: false })
       }
     })
     //last but not least, enable the buttons & input
@@ -76,40 +75,37 @@ class App extends Component {
   }
 
   async makeBet(bet, amount) {
-    //randomSeed - one of the components from which will be generated final random value
-    const networkId = await this.state.web3.eth.net.getId() 
-    if(networkId!==4) {
-      this.setState({wrongNetwork: true})
-    } else if(typeof this.state.account !=='undefined' && this.state.account !==null){
-      var randomSeed = Math.floor(Math.random() * Math.floor(1e9))
-
-      //Send bet to the contract and wait for the verdict
-      this.state.contract.methods.game(bet, randomSeed).send({from: this.state.account, value: amount}).on('transactionHash', (hash) => {
-        this.setState({ loading: true })
-        this.state.contract.events.Result({}, async (error, event) => {
+    let balance, maxBet, minBet
+    var randomSeed = Math.floor(Math.random() * Math.floor(1e9))
+    //Send bet to the contract and wait for the verdict
+    this.state.contract.methods.game(bet, randomSeed).send({from: this.state.account, value: amount}).on('transactionHash', (hash) => {
+      this.setState({ loading: true})
+      
+      this.state.contract.events.Result({}, async (error, event) => {
+        //check that the event is for user
+        if (event.returnValues.player.toLowerCase() === this.state.account){
           const verdict = event.returnValues.winAmount
-          console.log(this.state.web3.utils.fromWei(verdict, 'ether'))
-          
           if(verdict === '0') {
-            window.alert('lose :(')
+            alert('YOU LOSE!')
+            balance = await this.state.web3.eth.getBalance(this.state.account)
+            maxBet = await this.state.web3.eth.getBalance(this.state.contractAddress)
+            minBet = await this.state.contract.methods.weiInUsd().call()
+            this.setState({ balance, maxBet, minBet })
           } else {
-            window.alert('WIN!')
-          }
-
-          //Prevent error when user logout, while waiting for the verdict
-          if(this.state.account!==null && typeof this.state.account!=='undefined'){
-            const balance = await this.state.web3.eth.getBalance(this.state.account)
-            const maxBet = await this.state.web3.eth.getBalance(this.state.contractAddress)
-            this.setState({ balance: balance, maxBet: maxBet })
-          }
-          this.setState({ loading: false })
-        })
-      }).on('error', (error) => {
-        window.alert('Error')
+            alert('YOU WIN!')
+            balance = await this.state.web3.eth.getBalance(this.state.account)
+            maxBet = await this.state.web3.eth.getBalance(this.state.contractAddress)
+            minBet = await this.state.contract.methods.weiInUsd().call()
+            this.setState({ balance, maxBet, minBet })
+          }      
+        }
       })
-    } else {
-      window.alert('Problem with account or network')
-    }
+    }).then ( async () => {
+      //update balance once ETH is sent to the smart contract
+      balance = await this.state.web3.eth.getBalance(this.state.account)
+      this.setState({ balance, loading: false })
+      alert("Please be patient, talking to oracles now...")
+    })
   }
 
   onChange(value) {
@@ -123,9 +119,7 @@ class App extends Component {
       amount: null,
       balance: null,
       contract: null,
-      event: null,
       loading: true,
-      network: null,
       maxBet: 0,
       minBet: 0,
       web3: null,
@@ -133,8 +127,8 @@ class App extends Component {
       contractAddress: null
     }
 
+    //to set state in components
     this.makeBet = this.makeBet.bind(this)
-    this.setState = this.setState.bind(this)
     this.onChange = this.onChange.bind(this)
   }
 

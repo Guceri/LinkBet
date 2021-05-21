@@ -9,7 +9,8 @@ Major Topics Learned:
 - callback interaction with another contract
 - commenting out unused variables to suppress warnings
 - use of mapping to allow multiple pending states (bets) to ensure proper payouts 
-- for loops in smart contracts
+- using for loops in smart contracts for pending processes
+- dynamically adjusting account balances withou refreshing the page
 - react -> "componentWillMount" removed & "componentDidMount" used  
 
 Resources:
@@ -18,7 +19,8 @@ Resources:
 
 **NOTE**: My code has been modified and updated to fix general use bugs present in the Dapp University 
 tutorial. MetaMask and React have gone through some changes which I have updated along with making the code
-cleaner and easier to read (front-end).  
+cleaner and easier to read (front-end).  The UI was also not dynamically updating which would require the user
+to have to refresh the page.  
 
 ## Design
 ![](public/BettingGame.png)
@@ -28,9 +30,11 @@ cleaner and easier to read (front-end).
 The front end will display the current connected account in the upper right hand corner along with the 
 users balance in the lower right of the app.  The user can place a bet for any amount between the min and 
 max bet amounts.  There is a 50/50 change of getting the outcome is either "high" or "low".  There payout is
-1-1 (ie. if you bet 1 eth and win, you receive 1 eth )
+1-1 (ie. if you bet 1 eth and win, you receive 1 eth ).It takes a considerable amount of time to get a result back,
+roughly 1-2 min on the rinkeby network.  
 
 To play the game, please use the faucet below to get ETH and fund your smart contract with both ETH & LINK.
+
 
 - Use Rinkeby test network and get funds from faucet
 	- https://faucet.rinkeby.io/
